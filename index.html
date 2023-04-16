@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click the Dot</title>
+    <style>
+      #dot {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: red;
+        cursor: pointer;
+        animation: move 2s linear infinite;
+      }
+      @keyframes move {
+        from {
+          left: 0;
+          top: 0;
+        }
+        to {
+          left: calc(100% - 50px);
+          top: calc(100% - 50px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Click the Dot</h1>
+    <button id="start-button">Start Game</button>
+    <div id="scoreboard">Score: 0</div>
+    <div id="timer">Time Remaining: 30</div>
+    <div id="dot"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
